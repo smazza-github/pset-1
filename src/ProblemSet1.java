@@ -32,13 +32,17 @@ public class ProblemSet1 {
          System.out.println("\n" + roundArea + " square millimeters");
 
 
-
-
         /*
          * Exercise 2.
          *
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
+
+         final double lengthCentimeters = length * 2.54;
+         final double widthCentimeters = width * 2.54;
+         final double perimeter = (lengthCentimeters * 2) + (widthCentimeters * 2);
+         final double roundPerimeter = Math.round(perimeter * 100.0)/100.0;
+         System.out.println("\n" + roundPerimeter + " centimeters.");
 
 
 
