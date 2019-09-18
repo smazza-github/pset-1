@@ -29,7 +29,7 @@ public class ProblemSet1 {
          final double widthMillimeters = width * millimetersConversion;
          final double area = lengthMillimeters * widthMillimeters;
          final double roundArea = Math.round(area * 100.0)/100.0;
-         System.out.println("\n" + roundArea + " square millimeters");
+         System.out.printf("\n%,.2f %s\n", roundArea, " square millimeters.");
 
 
         /*
@@ -38,11 +38,12 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         final double lengthCentimeters = length * 2.54;
-         final double widthCentimeters = width * 2.54;
+         final double centimetersConversion = 2.54;
+         final double lengthCentimeters = length * centimetersConversion;
+         final double widthCentimeters = width * centimetersConversion;
          final double perimeter = (lengthCentimeters * 2) + (widthCentimeters * 2);
          final double roundPerimeter = Math.round(perimeter * 100.0)/100.0;
-         System.out.println("\n" + roundPerimeter + " centimeters.");
+         System.out.printf("\n%,.2f %s\n", roundPerimeter, " centimeters.");
 
 
 
@@ -53,7 +54,10 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-
+         final double lengthSquared = length * length;
+         final double widthSquared = width * width;
+         final double hypotenuse = Math.round(java.lang.Math.sqrt(lengthSquared + widthSquared)*100.0)/100.0;
+         System.out.printf("\n%,.2f %s\n", hypotenuse, " inches.");
 
         /*
          * Exercise 4.
@@ -80,6 +84,18 @@ public class ProblemSet1 {
          * I make $12.50/hour working as a cashier at a local supermarket. How much money
          * will I make this week?
          */
+
+         final double hourWage = 12.50;
+         final double m = 7.5 * hourWage;
+         final double tu = 8 * hourWage;
+         final double w = 10.5 * hourWage;
+         final double th = 9.5 * hourWage;
+         final double f = 6 * hourWage;
+         final double sat = 11.5 * hourWage;
+         final double sun = 0  * hourWage;
+         final double payCheck = m + tu + w + th + f + sat + sun;
+         final double roundPayCheck = Math.round(payCheck * 100.0)/100.0;
+         System.out.printf("\n%,.2f %s\n", roundPayCheck, ".");
 
 
 
