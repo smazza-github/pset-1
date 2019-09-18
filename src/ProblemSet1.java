@@ -12,6 +12,8 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
+import java.text.NumberFormat;
+
 public class ProblemSet1 {
 
     public static void main(String[] args) {
@@ -76,7 +78,11 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
-
+        final double homeAvg = (((88 + 91 + 0)/3)*0.15);
+        final double quizAvg = (((84 + 89 +93)/3)*0.35);
+        final double testAvg = (((74 + 87 + 82)/3)*0.5);
+        final double periodGrade = (homeAvg + quizAvg + testAvg);
+        System.out.println("\n" + mpGrade + "%.");
 
         /*
          * Exercise 5.
@@ -95,9 +101,8 @@ public class ProblemSet1 {
          final double sun = 0  * hourWage;
          final double payCheck = m + tu + w + th + f + sat + sun;
          final double roundPayCheck = Math.round(payCheck * 100.0)/100.0;
-         System.out.printf("\n%,.2f %s\n", roundPayCheck, ".");
-
-
+         NumberFormat currencyformat = NumberFormat.getCurrencyInstance();
+         System.out.println("\n" + currencyformat.format(roundPayCheck) + ".");
 
         /*
          * Exercise 6.
@@ -105,6 +110,18 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
+         final double salary = 117000;
+         final double fedTax = 0.240;
+         final double incomeTax = 0.0637;
+         final double contribution = 0.07;
+
+         final double fedTax1 = 0.240 *
+         final double incomeTax1 =
+         final double contribution1 =
+
+         final double yearly = (((salary - contribution) - fedTax) - incomeTax);
+         final double monthly = yearly / 24;
+         System.out.println("\n" + currencyformat.format(monthly) + ".");
 
 
         /*
