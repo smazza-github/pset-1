@@ -119,18 +119,15 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-         // final double salary = 117000;
-         // final double fedTax = 0.240;
-         // final double incomeTax = 0.0637;
-         // final double contribution = 0.07;
-         //
-         // final double fedTax1 = 0.240 *
-         // final double incomeTax1 =
-         // final double contribution1 =
-         //
-         // final double yearly = (((salary - contribution) - fedTax) - incomeTax);
-         // final double monthly = yearly / 24;
-         // System.out.println("\n" + currencyformat.format(monthly) + ".");
+         final double SALARY = 117000;
+         double biweekly = 117000/24;
+         final double FEDTAX = 0.24;
+         final double INCOMETAX = 0.0637;
+         final double CONTRIBUTION = 0.07;
+         double salaryContribution = (1-CONTRIBUTION) * biweekly;
+         double finalSalary = (1-INCOMETAX) * (1 - FEDTAX) * salaryContribution;
+         System.out.printf("\n" + currencyformat.format(finalSalary) + ".\n");
+
 
 
         /*
@@ -171,7 +168,11 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
-         final int TEMPERATURE = 30;
+         final int TEMPERATURE = 38;
+         final int WINDSPEED = 14;
+         double windChill = 35.74 + (.6215 * TEMPERATURE) + (((.4275 * TEMPERATURE) - 35.75) * (Math.pow(WINDSPEED, .16)));
+         System.out.printf("\n%.1f %s\n", windChill, "degrees.");
+
 
     }
 }
