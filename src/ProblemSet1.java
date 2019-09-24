@@ -26,9 +26,9 @@ public class ProblemSet1 {
 
          final double LENGTH = 8.5;
          final int WIDTH  = 11;
-         final double MILLIMETERSCONVERSION = 25.4;
-         double lengthMillimeters = LENGTH * MILLIMETERSCONVERSION;
-         double widthMillimeters = WIDTH  * MILLIMETERSCONVERSION;
+         final double MILLIMETERS_CONVERSION = 25.4;
+         double lengthMillimeters = LENGTH * MILLIMETERS_CONVERSION;
+         double widthMillimeters = WIDTH  * MILLIMETERS_CONVERSION;
          double area = lengthMillimeters * widthMillimeters;
          double roundArea = Math.round(area * 100.0)/100.0;
          System.out.printf("\n%,.2f %s\n", roundArea, " square millimeters.");
@@ -40,9 +40,9 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         final double CENTIMETERSCONVERSION = 2.54;
-         double lengthCentimeters = LENGTH * CENTIMETERSCONVERSION;
-         double widthCentimeters = WIDTH  * CENTIMETERSCONVERSION;
+         final double CENTIMETERS_CONVERSION = 2.54;
+         double lengthCentimeters = LENGTH * CENTIMETERS_CONVERSION;
+         double widthCentimeters = WIDTH  * CENTIMETERS_CONVERSION;
          double perimeter = (lengthCentimeters * 2) + (widthCentimeters * 2);
          double roundPerimeter = Math.round(perimeter * 100.0)/100.0;
          System.out.printf("\n%,.2f %s\n", roundPerimeter, " centimeters.");
@@ -160,7 +160,19 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
+         int currentYear = 2020;
+         boolean leapYear = (currentYear % 4) < (currentYear % 100) || (currentYear % 400 == 0);
 
+         System.out.println("\n" + currentYear + " is a leap year..." + leapYear + ".");
+
+         currentYear = 2100;
+         leapYear = (currentYear % 4) < (currentYear % 100) || (currentYear % 400 == 0);
+
+         System.out.println(currentYear + "is a leap year..." + leapYear + ".");
+
+         currentYear = 2400;
+         leapYear = (currentYear % 4) < (currentYear % 100) || (currentYear % 400 == 0);
+         System.out.println(currentYear + "is a leap year..." + leapYear + ".");
 
         /*
          * Exercise 10.
@@ -171,6 +183,7 @@ public class ProblemSet1 {
          final int TEMPERATURE = 38;
          final int WINDSPEED = 14;
          double windChill = 35.74 + (.6215 * TEMPERATURE) + (((.4275 * TEMPERATURE) - 35.75) * (Math.pow(WINDSPEED, .16)));
+
          System.out.printf("\n%.1f %s\n", windChill, "degrees.");
 
 
