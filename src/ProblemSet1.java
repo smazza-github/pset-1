@@ -137,14 +137,15 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
-         int students = 273;
-         int teachers = 28;
-         int passengerCapacity = 54;
+         final int students = 273;
+         final int teachers = 28;
+         final int passengerCapacity = 54;
 
-         final double totalStudents = students + teachers;
-         final double buses = totalStudents /  passengerCapacity;
+         int totalStudents = students + teachers;
+         int totalBuses = (totalStudents /  passengerCapacity + 1);
+         int finalBusPassengerAmount = totalStudents % passengerCapacity;
 
-
+         System.out.println("\n" + totalBuses + " buses are needed, with " + finalBusPassengerAmount + " passenger on the last bus.");
 
         /*
          * Exercise 8.
