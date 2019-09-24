@@ -153,7 +153,12 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
+         final double lengthCornhole = 24;
+         final double widthCornhole = 48;
+         final double diameter = 6;
 
+         double surfaceArea = (lengthCornhole * widthCornhole) - (Math.PI * Math.pow((diameter / 2), 2));
+         System.out.printf("\n%.2f %s\n", surfaceArea, " square inches.");
 
         /*
          * Exercise 9.
@@ -169,11 +174,11 @@ public class ProblemSet1 {
          currentYear = 2100;
          leapYear = (currentYear % 4) < (currentYear % 100) || (currentYear % 400 == 0);
 
-         System.out.println(currentYear + "is a leap year..." + leapYear + ".");
+         System.out.println(currentYear + " is a leap year..." + leapYear + ".");
 
          currentYear = 2400;
          leapYear = (currentYear % 4) < (currentYear % 100) || (currentYear % 400 == 0);
-         System.out.println(currentYear + "is a leap year..." + leapYear + ".");
+         System.out.println(currentYear + " is a leap year..." + leapYear + ".");
 
         /*
          * Exercise 10.
